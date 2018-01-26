@@ -6,8 +6,8 @@ package interpolation
 fun main(args: Array<String>) {
     val finiteDifferences = mutableListOf<MutableList<Float>>()
 
-    val x = mutableListOf(0.0f, 0.1f, 0.2f, 0.3f, 0.4f)
-    val y = mutableListOf(1.9800f, 1.9048f, 1.8187f, 1.7408f, 1.6703f)
+    val x = mutableListOf(1f, 2f, 3f, 4f)
+    val y = mutableListOf(2.2f, 5.2f, 8.4f, 10.5f)
 
     println("Исходные данные:")
     x.zip(y).forEachIndexed { i, pair -> println("x$i = ${pair.first}; y$i = ${pair.second}") }

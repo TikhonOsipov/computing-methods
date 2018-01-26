@@ -4,10 +4,10 @@ package optimisation
  * Created by tikhon.osipov on 24.01.2018
  */
 fun main(args: Array<String>) {
-    val eps = 0.001f
+    val eps = 0.1f
     var lambda = 0.5f
-    var x = 2f
-    var y = 1f
+    var x = 6f
+    var y = 4f
     lambda = findLambda(x, y, lambda)
     var nextX = nextX(x, y, lambda)
     var nextY = nextY(x, y, lambda)
@@ -38,17 +38,17 @@ fun main(args: Array<String>) {
 }
 
 fun Q(x: Float, y: Float): Float {
-    return x*x + 2f * y*y
+    return 4*x*x + 3*y*y - 3*y
 }
 
 // dQ/dx
 fun Pk(x: Float, y: Float): Float {
-    return 2*x
+    return 8*x
 }
 
 // dQ/dy
 fun Sk(x: Float, y: Float): Float {
-    return 4*y
+    return 6*y - 3
 }
 
 fun nextX(x: Float, y: Float, lambda: Float): Float {

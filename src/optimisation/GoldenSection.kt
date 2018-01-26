@@ -7,7 +7,7 @@ import toSmallString
  */
 fun main(args: Array<String>) {
     //println("Hello World!")
-    goldenSection(a = 1.0, b = 2.0, iterations = 2)
+    goldenSection(a = 0.0, b = 1.0, iterations = 5)
 }
 
 //минимум функции
@@ -65,4 +65,4 @@ private fun goldenSection(a: Double, b: Double, iterations: Int) {
     println("x = ${xTarget.toSmallString()}, f(x) = ${fTarget.toSmallString()}")
 }
 
-private fun function(x: Double): Double = Math.exp(x) - 4 * x
+private fun function(x: Double): Double = 2 * x * x - 3 * Math.exp(-x)
